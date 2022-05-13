@@ -3,12 +3,12 @@ const API_URL = 'https://randomuser.me/api/?inc=gender,first,name,nat,location,r
 
 async function getData(){
     try{
-        const response = await fetch(API_URL);
-        if(!response.ok){
-            throw new Error()
+        const response = await fetch(API_URL).then((res) => res.json());
+        if(!response){
+            throw new Error('Error in fetch')
         }
-        const json = response.then(result => result.json());
-        return json;
+        console.log(response);
+        return response;
     }catch(err){
         if(err instanceof Error){
             console.log(`Connection error `)
@@ -17,9 +17,8 @@ async function getData(){
     } 
 }
 
-const data = getData();
+getData();
 
-console.log(data);
 
 
 
