@@ -1,9 +1,9 @@
 //HANDLERS
 
 const changeContainerColor = (containerId, color) => {
-    const elem = querySelect(containerId);
-    console.log(elem);
-    elem.style.background = color;
+       const elem = querySelect(containerId);
+       console.log(elem);
+       elem.style.background = color;
 }
 
 
@@ -23,13 +23,17 @@ const createContainer = (id,className) => {
     return container;
 }
 
-const createButton = (id,className) => {
+const createButton = (id,className,handlerFunction, args) => {
+    console.log(args)
     const button = createElement('button', className , id)
     button.style.width= '200px';
-    button.addEventListener("click", () => {changeContainerColor('container', '#000000')});
+    button.addEventListener("click", () => {handlerFunction(...args)});
     button.textContent = 'Zmien kolor';
     return button;
 }
+
+
+
 
 const appendElementToOther = (element1, element2) => {
     element1.appendChild(element2);
@@ -39,7 +43,7 @@ const appendElementToOther = (element1, element2) => {
 
 const render = () =>{
     document.body.appendChild(createContainer('container', 'main_container'));
-    appendElementToOther(querySelect('container'), createButton('btn1', 'button'));
+    appendElementToOther(querySelect('container'), createButton('btn1', 'button', changeContainerColor,['container','red']));
 }
 
 
