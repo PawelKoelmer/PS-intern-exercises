@@ -1,6 +1,5 @@
 //HANDLERS
 
-<<<<<<< HEAD
 // const changeContainerColor = (containerId, color) => {
 //        const elem = querySelect(containerId);
 //        const elemCordinates = elem.getBoundingClientRect();
@@ -59,15 +58,10 @@ const currentQuarter = (elemCordinates,pointerCordinates) => {
     }else if(pointerCordinates.mouseX > (elemCordinates.right - (0.5 * elemCordinates.width)) && pointerCordinates.mouseY > (elemCordinates.bottom - (0.5*elemCordinates.height))){
         return 3;
     }
+
+
 }
 
-=======
-const changeContainerColor = (containerId, color) => {
-       const elem = querySelect(containerId);
-       elem.style.background = color;
-}
-
->>>>>>> origin/main
 const resizeContainer = (elemId,height,width) => {
     const elem = querySelect(elemId);
     elem.style.width = `${width}px`;
@@ -81,27 +75,6 @@ const hideElement = (elemId,isHidden) => {
 
 
 //CREATING FUNCTIONS
-<<<<<<< HEAD
-=======
-
-// const createForm =  (formId,listOfInputs) => {
-//     const form = createElement('form','',formId);
-//     listOfInputs.forEach(input => {
-//         appendElementToOther(createFormInput(input),formId);
-//     });
-//     appendElementToOther(createLabelForElement('login','Login'),querySelect('login'))
-//     appendElementToOther(createLabelForElement('password','hasło'),querySelect('password'))
-//     return form;
-// }
-//
-// const createFormInput = (name) => {
-//     const input = createElement('input');
-//     input.id = name;
-//     input.type = "text";
-//     input.style.display = 'block';
-//     return input;
-// }
->>>>>>> origin/main
 
 const createContainer = (id,className) => {
     const container = createElement('div',className,id);
