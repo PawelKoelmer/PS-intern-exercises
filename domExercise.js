@@ -2,9 +2,17 @@
 
 const changeContainerColor = (containerId, color) => {
        const elem = querySelect(containerId);
-       console.log(elem);
        elem.style.background = color;
 }
+
+const resizeContainer = (elemId,height,width) => {
+    const elem = querySelect(elemId);
+    elem.style.width = `${width}px`;
+    elem.style.height = `${height}px`;
+}
+
+
+//CREATING FUNCTIONS
 
 
 const createContainer = (id,className) => {
@@ -23,46 +31,51 @@ const createContainer = (id,className) => {
     return container;
 }
 
-const createButton = (id,className,handlerFunction, args) => {
-    console.log(args)
+const createButton = (id,className, textContent ,handlerFunction, args) => {
     const button = createElement('button', className , id)
     button.style.width= '200px';
     button.addEventListener("click", () => {handlerFunction(...args)});
-    button.textContent = 'Zmien kolor';
+    button.textContent = textContent;
     return button;
 }
 
 
 
 
-const appendElementToOther = (element1, element2) => {
-    element1.appendChild(element2);
-}
-
-
+//MAIN FUNCTION
 
 const render = () =>{
-    document.body.appendChild(createContainer('container', 'main_container'));
-    appendElementToOther(querySelect('container'), createButton('btn1', 'button', changeContainerColor,['container','red']));
+    appendElementToOther(createContainer('container', 'main_container'));
+    appendElementToOther(createButton('btn1', 'button', 'Zmień kolor' ,
+            changeContainerColor,['container','red']),
+        querySelect('container'));
+    appendElementToOther(createButton('btn2','button','Zmień rozmiar',
+        resizeContainer,['container',window.outerWidth,window.outerHeight]))
 }
-
-
 
 
 
 //HELPERS
 
 const querySelect = (elementId) => {
-    return document.querySelectorAll(`#${elementId}`)[0];
+    return document.querySelector(`#${elementId}`);
 }
 
-const createElement = (elementType, elementClass = null, elementId = null) => {
+const createElement = (elementType, elementClass = '', elementId = '') => {
     const element = document.createElement(elementType);
     element.className = elementClass;
     element.id = elementId;
     return element;
 }
 
+const appendElementToOther = (elementToAppend,targetElement='') => {
+    if(targetElement){
+        targetElement.appendChild(elementToAppend);
+    }
+    else{
+        document.body.appendChild(elementToAppend);
+    }
+}
 
 
 
