@@ -11,6 +11,11 @@ const resizeContainer = (elemId,height,width) => {
     elem.style.height = `${height}px`;
 }
 
+const hideElement = (elemId,isHidden) => {
+    const elem = querySelect(elemId);
+    elem.style.visibility = isHidden;
+}
+
 
 //CREATING FUNCTIONS
 
@@ -39,8 +44,22 @@ const createButton = (id,className, textContent ,handlerFunction, args) => {
     return button;
 }
 
+const createInput = (id,type) => {
+    const input = createElement('input','',id);
+    input.setAttribute('type',type);
+    return input;
+}
 
-
+const addCheckboxFunctionality = () => {
+    const checkbox = querySelect('select1');
+    checkbox.addEventListener('change',(e) =>{
+        if(e.target.checked){
+            hideElement('btn2','hidden');
+        }else {
+            hideElement('btn2', 'visible');
+        }
+    })
+}
 
 //MAIN FUNCTION
 
@@ -51,6 +70,9 @@ const render = () =>{
         querySelect('container'));
     appendElementToOther(createButton('btn2','button','Zmień rozmiar',
         resizeContainer,['container',window.outerWidth,window.outerHeight]))
+    appendElementToOther(createInput('select1','checkbox',))
+    appendElementToOther(createLabelForElement('select1','ukryj przycisk resize'))
+    addCheckboxFunctionality()
 }
 
 
@@ -75,6 +97,13 @@ const appendElementToOther = (elementToAppend,targetElement='') => {
     else{
         document.body.appendChild(elementToAppend);
     }
+}
+
+const createLabelForElement = (targetId,labelText) =>{
+    const label = createElement('label','','');
+    label.setAttribute('for',targetId);
+    label.innerText = labelText;
+    return label;
 }
 
 
