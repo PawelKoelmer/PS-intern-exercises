@@ -1,10 +1,73 @@
 //HANDLERS
 
+<<<<<<< HEAD
+// const changeContainerColor = (containerId, color) => {
+//        const elem = querySelect(containerId);
+//        const elemCordinates = elem.getBoundingClientRect();
+//   //     const pointerCordinatesY = event.clientY;
+//
+//        console.log(pointerCordinates)
+//
+//        switch(pointerCordinates){
+//            case 1:
+//                break
+//            case 2:
+//                break
+//            case 3:
+//                break
+//            case 4:
+//                break
+//            default:
+//                break;
+//        }
+// }
+
+const changeContainerColorDependsCordintaes = (containerId,mouseX,mouseY) =>{
+    const elem = querySelect(containerId);
+    const elemCordinates = elem.getBoundingClientRect();
+    const pointerCordinates = {mouseX, mouseY}
+    console.log(pointerCordinates)
+    console.log((elemCordinates.right - (0.5 * elemCordinates.width)))
+    console.log((elemCordinates.bottom - (0.5*elemCordinates.height)))
+    switch(currentQuarter(elemCordinates,pointerCordinates)){
+        case 1:{
+            elem.style.background = '#00ccbb';
+            break;
+        }
+        case 2:{
+            elem.style.background = '#222222';
+            break;
+        }
+        case 3:{
+            elem.style.background = '#cccccc';
+            break;
+        }
+        case 4:{
+            elem.style.background = '#bb00cc';
+            break;
+        }
+    }
+}
+
+const currentQuarter = (elemCordinates,pointerCordinates) => {
+    if(pointerCordinates.mouseX > (elemCordinates.right - (0.5 * elemCordinates.width)) && pointerCordinates.mouseY < (elemCordinates.bottom - (0.5*elemCordinates.height))){
+        return 2;
+    }else if(pointerCordinates.mouseX < (elemCordinates.right - (0.5 * elemCordinates.width)) && pointerCordinates.mouseY < (elemCordinates.bottom - (0.5*elemCordinates.height))){
+        return 1;
+    }else if(pointerCordinates.mouseX < (elemCordinates.right - (0.5 * elemCordinates.width)) && pointerCordinates.mouseY > (elemCordinates.bottom - (0.5*elemCordinates.height))){
+        return 4;
+    }else if(pointerCordinates.mouseX > (elemCordinates.right - (0.5 * elemCordinates.width)) && pointerCordinates.mouseY > (elemCordinates.bottom - (0.5*elemCordinates.height))){
+        return 3;
+    }
+}
+
+=======
 const changeContainerColor = (containerId, color) => {
        const elem = querySelect(containerId);
        elem.style.background = color;
 }
 
+>>>>>>> origin/main
 const resizeContainer = (elemId,height,width) => {
     const elem = querySelect(elemId);
     elem.style.width = `${width}px`;
@@ -18,6 +81,8 @@ const hideElement = (elemId,isHidden) => {
 
 
 //CREATING FUNCTIONS
+<<<<<<< HEAD
+=======
 
 // const createForm =  (formId,listOfInputs) => {
 //     const form = createElement('form','',formId);
@@ -36,19 +101,20 @@ const hideElement = (elemId,isHidden) => {
 //     input.style.display = 'block';
 //     return input;
 // }
+>>>>>>> origin/main
 
 const createContainer = (id,className) => {
     const container = createElement('div',className,id);
     container.style.background = '#6ba832';
     container.style.width = '500px';
     container.style.height = '500px';
-    container.addEventListener("mouseover", (event)=> {
+    let mouseX,mouseY;
+    container.addEventListener('mousemove', (event) =>{
         if(event.target.id === id){
-            changeContainerColor(id, "#000000")
+        mouseX = event.offsetX;
+        mouseY = event.offsetY;
+        changeContainerColorDependsCordintaes(id,mouseX,mouseY);
         }
-    })
-    container.addEventListener("mouseout", (event) => {
-            changeContainerColor(id, '#6ba832')
     })
     return container;
 }
