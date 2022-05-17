@@ -1,33 +1,8 @@
 //HANDLERS
-
-// const changeContainerColor = (containerId, color) => {
-//        const elem = querySelect(containerId);
-//        const elemCordinates = elem.getBoundingClientRect();
-//   //     const pointerCordinatesY = event.clientY;
-//
-//        console.log(pointerCordinates)
-//
-//        switch(pointerCordinates){
-//            case 1:
-//                break
-//            case 2:
-//                break
-//            case 3:
-//                break
-//            case 4:
-//                break
-//            default:
-//                break;
-//        }
-// }
-
 const changeContainerColorDependsCordintaes = (containerId,mouseX,mouseY) =>{
     const elem = querySelect(containerId);
     const elemCordinates = elem.getBoundingClientRect();
     const pointerCordinates = {mouseX, mouseY}
-    console.log(pointerCordinates)
-    console.log((elemCordinates.right - (0.5 * elemCordinates.width)))
-    console.log((elemCordinates.bottom - (0.5*elemCordinates.height)))
     switch(currentQuarter(elemCordinates,pointerCordinates)){
         case 1:{
             elem.style.background = '#00ccbb';
@@ -73,6 +48,9 @@ const hideElement = (elemId,isHidden) => {
     elem.style.visibility = isHidden;
 }
 
+const calculateLength = (startingPoint,endPoint) => {
+    return Math.pow((Math.pow(endPoint.mouseX - startingPoint.mouseX,2) + Math.pow((endPoint.mouseY - startingPoint.mouseY),2)),1/2);
+}
 
 //CREATING FUNCTIONS
 
@@ -82,12 +60,23 @@ const createContainer = (id,className) => {
     container.style.width = '500px';
     container.style.height = '500px';
     let mouseX,mouseY;
+    let startingPoint, endPoint;
     container.addEventListener('mousemove', (event) =>{
         if(event.target.id === id){
         mouseX = event.offsetX;
         mouseY = event.offsetY;
         changeContainerColorDependsCordintaes(id,mouseX,mouseY);
         }
+    })
+    container.addEventListener('mousedown',(event)=>{
+        startingPoint = {mouseX : event.offsetX ,mouseY:event.offsetY }
+        console.log(startingPoint);
+    })
+    container.addEventListener('mouseup',(event)=>{
+        endPoint = {mouseX: event.offsetX ,mouseY: event.offsetY }
+        console.log(endPoint);
+        console.log(calculateLength(startingPoint,endPoint))
+
     })
     return container;
 }
@@ -168,5 +157,6 @@ const createLabelForElement = (targetId,labelText) =>{
 
 
 render()
+dragAndDropAlert();
 
 
