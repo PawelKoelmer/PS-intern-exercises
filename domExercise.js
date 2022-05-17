@@ -52,6 +52,19 @@ const calculateLength = (startingPoint,endPoint) => {
     return Math.pow((Math.pow(endPoint.mouseX - startingPoint.mouseX,2) + Math.pow((endPoint.mouseY - startingPoint.mouseY),2)),1/2);
 }
 
+const rotateImageFunction = () => {
+    const image = querySelect('ball');
+
+    image.addEventListener('mouseenter', (event) => {
+            if(event.target.id  === image.id){
+                image.classList.add('imageTrans')
+            }
+    })
+    image.addEventListener('mouseout',(event) => {
+        image.classList.remove('imageTrans');
+    })
+}
+
 //CREATING FUNCTIONS
 
 const createContainer = (id,className) => {
@@ -110,15 +123,16 @@ const addCheckboxFunctionality = () => {
 
 const render = () =>{
     appendElementToOther(createContainer('container', 'main_container'));
-    appendElementToOther(createButton('btn1', 'button', 'Zmień kolor' ,
-            changeContainerColor,['container','red']),
-        querySelect('container'));
+    // appendElementToOther(createButton('btn1', 'button', 'Zmień kolor' ,
+    //         changeContainerColor,['container','red']),
+    //     querySelect('container'));
     appendElementToOther(createButton('btn2','button','Zmień rozmiar',
         resizeContainer,['container',window.outerWidth,window.outerHeight]))
     appendElementToOther(createInput('select1','checkbox',))
     appendElementToOther(createLabelForElement('select1','ukryj przycisk resize'))
     addCheckboxFunctionality()
-
+    appendElementToOther(createImageField('50px','50px','preview.svg'));
+    rotateImageFunction();
 }
 
 
@@ -151,12 +165,19 @@ const createLabelForElement = (targetId,labelText) =>{
     return label;
 }
 
+const createImageField = (width,height,src) => {
+    const image = createElement('img','','ball');
+    image.style.width = width;
+    image.style.height = height;
+    image.setAttribute('src',src);
+    return image;
+}
 
 
 //Render Site
 
 
-render()
-dragAndDropAlert();
+render();
+
 
 
