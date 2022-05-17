@@ -65,6 +65,15 @@ const rotateImageFunction = () => {
     })
 }
 
+const focusedSiteName = () => {
+    if(!document.hasFocus()){
+        document.title = 'Wroc do mnie';
+    }
+    else{
+        document.title = 'Document';
+    }
+}
+
 //CREATING FUNCTIONS
 
 const createContainer = (id,className) => {
@@ -133,6 +142,9 @@ const render = () =>{
     addCheckboxFunctionality()
     appendElementToOther(createImageField('50px','50px','preview.svg'));
     rotateImageFunction();
+    document.addEventListener('focusout',() =>{
+        focusedSiteName();
+    })
 }
 
 
