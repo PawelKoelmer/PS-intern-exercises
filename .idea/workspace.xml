@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4482c1d5-1d71-45fd-898e-d87bbb53c107" name="Changes" comment="Change project to CSS Exercises - Create first tutorial part">
+    <list default="true" id="4482c1d5-1d71-45fd-898e-d87bbb53c107" name="Changes" comment="Recreate CSS with BEM">
+      <change afterPath="$PROJECT_DIR$/sass/abstracts/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/abstracts/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/abstracts/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/base/_animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/base/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/base/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/base/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/layuot/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/pages/_home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652787013287</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Recreate CSS with BEM">
+      <created>1652792342797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652792342797</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +138,7 @@
     <MESSAGE value="Add drag and drop function with computed section length" />
     <MESSAGE value="Add animation for ball" />
     <MESSAGE value="Change project to CSS Exercises - Create first tutorial part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change project to CSS Exercises - Create first tutorial part" />
+    <MESSAGE value="Recreate CSS with BEM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Recreate CSS with BEM" />
   </component>
 </project>
