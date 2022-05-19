@@ -4,21 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4482c1d5-1d71-45fd-898e-d87bbb53c107" name="Changes" comment="Recreate CSS with BEM">
-      <change afterPath="$PROJECT_DIR$/sass/abstracts/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/abstracts/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/abstracts/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/base/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/base/_base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/base/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/base/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/layuot/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/pages/_home.scss" afterDir="false" />
+    <list default="true" id="4482c1d5-1d71-45fd-898e-d87bbb53c107" name="Changes" comment="Add flex and grid layouts files">
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/fonts/linea-basic-10.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/fonts/linea-basic-10.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/fonts/linea-basic-10.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/fonts/linea-basic-10.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/icon-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/_ICONFONT/icons-reference.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/linea_basic_1.0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/read_me.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_bg-video.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_composition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_feature-box.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_form.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_navigation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sass/components/_story.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/abstracts/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/abstracts/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_animations.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/components/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layuot/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layuot/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/pages/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/pages/_home.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,23 +55,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/pawel/PS-intern-exercises",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pawel/PS-intern-exercises/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -88,6 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652718563484</updated>
       <workItem from="1652718565678" duration="7413000" />
+      <workItem from="1652854106417" duration="24895000" />
+      <workItem from="1652939690659" duration="16509000" />
     </task>
     <task id="LOCAL-00001" summary="Add drag and drop function with computed section length">
       <created>1652768896690</created>
@@ -117,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652792342797</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add SASS structure and file structure">
+      <created>1652797195692</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652797195692</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add flex and grid layouts files">
+      <created>1652797285905</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652797285905</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +170,8 @@
     <MESSAGE value="Add animation for ball" />
     <MESSAGE value="Change project to CSS Exercises - Create first tutorial part" />
     <MESSAGE value="Recreate CSS with BEM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recreate CSS with BEM" />
+    <MESSAGE value="Add SASS structure and file structure" />
+    <MESSAGE value="Add flex and grid layouts files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add flex and grid layouts files" />
   </component>
 </project>
